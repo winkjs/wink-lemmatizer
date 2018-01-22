@@ -44,5 +44,9 @@
     "mocha": "^5.0.0",
     "mocha-lcov-reporter": "^1.2.0"
   },
-  "runkitExampleFilename": "./runkit/example.js"
+  "runkitExampleFilename": "./runkit/example.js",
+  "dependencies": {
+    "wink-lexicon": "^1.5.0",
+    "wink-porter2-stemmer": "^1.0.8"
+  }
 }
