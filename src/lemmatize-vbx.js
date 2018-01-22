@@ -44,7 +44,7 @@ var regexes = [
   { rgx: /(.+)ies$/i, by: 'y', delta: 1 }
 ];
 
-// ### lemmatizeVBX
+// ### lemmatizeVerb
 /**
  *
  * Conjugates a `verb` to it's base form (VB).
@@ -52,10 +52,10 @@ var regexes = [
  * @param {string} verb — that needs to be conjugated to base form.
  * @return {string} the base form of `verb`.
  * @example
- * lemmatizeVBX( 'winning' );
+ * lemmatizeVerb( 'winning' );
  * // -> win
 */
-var lemmatizeVBX = function ( verb ) {
+var lemmatizeVerb = function ( verb ) {
   // Look up for irregular verb.
   var base = iVerbs[ verb ];
 
@@ -84,6 +84,6 @@ var lemmatizeVBX = function ( verb ) {
     // If a m1by is found return that; else fallback to stemming!
     ( m1by ) ? m1by : stem( verb )
   );
-}; // lemmatizeVBX()
+}; // lemmatizeVerb()
 
-module.exports = lemmatizeVBX;
+module.exports = lemmatizeVerb;
