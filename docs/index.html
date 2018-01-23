@@ -35,6 +35,16 @@
               
                 
                 <li><a
+                  href='#lemmatizenoun'
+                  class="">
+                  lemmatizeNoun
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#lemmatizeverb'
                   class="">
                   lemmatizeVerb
@@ -82,6 +92,84 @@ Software Foundation, version 3 of the License.</p>
   
 </section>
 </div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='lemmatizenoun'>
+      lemmatizeNoun
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts the input <code>noun</code> to it's singular form.</p>
+
+
+  <div class='pre p1 fill-light mt0'>lemmatizeNoun(noun: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>noun</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    — that needs to be lemmatized.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        the singular of 
+<code>noun</code>
+.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>lemmatizeNoun( <span class="hljs-string">'handkerchieves'</span> );
+<span class="hljs-comment">// -&gt; handkerchief</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
           
         
           
@@ -148,7 +236,7 @@ Software Foundation, version 3 of the License.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>lemmatizeVBX( <span class="hljs-string">'winning'</span> );
+      <pre class='p1 overflow-auto round fill-light'>lemmatizeVerb( <span class="hljs-string">'winning'</span> );
 <span class="hljs-comment">// -&gt; win</span></pre>
     
   
