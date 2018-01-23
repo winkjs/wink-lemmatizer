@@ -1,7 +1,7 @@
 //     wink-lemmatizer
 //     English lemmatizer
 //
-//     Copyright (C) 2017  GRAYPE Systems Private Limited
+//     Copyright (C) 2017-18  GRAYPE Systems Private Limited
 //
 //     This file is part of “wink-lemmatizer”.
 //
