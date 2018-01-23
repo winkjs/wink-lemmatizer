@@ -80,6 +80,24 @@
 <pre><code>npm install wink-lemmatizer --save
 </code></pre>
 <h3>Getting Started</h3>
+<pre class='hljs'><span class="hljs-comment">// Load wink-lemmatizer</span>
+<span class="hljs-keyword">var</span> wl = <span class="hljs-built_in">require</span>( <span class="hljs-string">'wink-lemmatizer'</span> );
+
+<span class="hljs-comment">// Lemmatize nouns</span>
+wl.lemmatizeNoun( <span class="hljs-string">'knives'</span> );
+<span class="hljs-comment">// -&gt; 'knife'</span>
+wl.lemmatizeNoun( <span class="hljs-string">'potatoes'</span> );
+<span class="hljs-comment">// -&gt; 'potato'</span>
+wl.lemmatizeNoun( <span class="hljs-string">'men'</span> );
+<span class="hljs-comment">// -&gt; 'man'</span>
+
+<span class="hljs-comment">// Lemmatize verbs</span>
+wl.lemmatizeVerb( <span class="hljs-string">'eaten'</span> );
+<span class="hljs-comment">// -&gt; 'eat'</span>
+wl.lemmatizeVerb( <span class="hljs-string">'pushes'</span> );
+<span class="hljs-comment">// -&gt; 'push'</span>
+wl.lemmatizeVerb( <span class="hljs-string">'suggesting'</span> );
+<span class="hljs-comment">// -&gt; 'suggesting'</span></pre>
 <h3>Documentation</h3>
 <p>Check out the <a href="http://winkjs.org/wink-lemmatizer/">lemmatizer API documentation</a> to learn more.</p>
 <h3>Need Help?</h3>

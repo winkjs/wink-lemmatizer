@@ -15,6 +15,26 @@ Use [npm](https://www.npmjs.com/package/wink-lemmatizer) to install:
     npm install wink-lemmatizer --save
 
 ### Getting Started
+```javascript
+// Load wink-lemmatizer
+var wl = require( 'wink-lemmatizer' );
+
+// Lemmatize nouns
+wl.lemmatizeNoun( 'knives' );
+// -> 'knife'
+wl.lemmatizeNoun( 'potatoes' );
+// -> 'potato'
+wl.lemmatizeNoun( 'men' );
+// -> 'man'
+
+// Lemmatize verbs
+wl.lemmatizeVerb( 'eaten' );
+// -> 'eat'
+wl.lemmatizeVerb( 'pushes' );
+// -> 'push'
+wl.lemmatizeVerb( 'suggesting' );
+// -> 'suggesting'
+```
 
 ### Documentation
 Check out the [lemmatizer API documentation](http://winkjs.org/wink-lemmatizer/) to learn more.
