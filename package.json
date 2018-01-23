@@ -11,6 +11,7 @@
     "Verb",
     "Adjective",
     "Adverb",
+    "NLP",
     "wink"
   ],
   "main": "src/wink-lemmatizer.js",
