@@ -2,7 +2,7 @@
 
 English lemmatizer
 
-### [![Stability](https://img.shields.io/badge/stability-1--experimental-orange.svg)](https://nodejs.org/api/documentation.html#documentation_stability_index) [![Build Status](https://api.travis-ci.org/winkjs/wink-lemmatizer.svg?branch=master)](https://travis-ci.org/winkjs/wink-lemmatizer) [![Coverage Status](https://coveralls.io/repos/github/winkjs/wink-lemmatizer/badge.svg?branch=master)](https://coveralls.io/github/winkjs/wink-lemmatizer?branch=master) [![Inline docs](http://inch-ci.org/github/winkjs/wink-lemmatizer.svg?branch=master)](http://inch-ci.org/github/winkjs/wink-lemmatizer) [![dependencies Status](https://david-dm.org/winkjs/wink-lemmatizer/status.svg)](https://david-dm.org/winkjs/wink-lemmatizer) [![devDependencies Status](https://david-dm.org/winkjs/wink-lemmatizer/dev-status.svg)](https://david-dm.org/winkjs/wink-lemmatizer?type=dev)
+### [![Build Status](https://api.travis-ci.org/winkjs/wink-lemmatizer.svg?branch=master)](https://travis-ci.org/winkjs/wink-lemmatizer) [![Coverage Status](https://coveralls.io/repos/github/winkjs/wink-lemmatizer/badge.svg?branch=master)](https://coveralls.io/github/winkjs/wink-lemmatizer?branch=master) [![Inline docs](http://inch-ci.org/github/winkjs/wink-lemmatizer.svg?branch=master)](http://inch-ci.org/github/winkjs/wink-lemmatizer) [![dependencies Status](https://david-dm.org/winkjs/wink-lemmatizer/status.svg)](https://david-dm.org/winkjs/wink-lemmatizer) [![devDependencies Status](https://david-dm.org/winkjs/wink-lemmatizer/dev-status.svg)](https://david-dm.org/winkjs/wink-lemmatizer?type=dev)
 
 [<img align="right" src="https://decisively.github.io/wink-logos/logo-title.png" width="100px" >](http://winkjs.org/)
 
