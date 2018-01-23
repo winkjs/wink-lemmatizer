@@ -33,7 +33,7 @@ wl.lemmatizeVerb( 'eaten' );
 wl.lemmatizeVerb( 'pushes' );
 // -> 'push'
 wl.lemmatizeVerb( 'suggesting' );
-// -> 'suggesting'
+// -> 'suggest'
 ```
 
 ### Documentation
