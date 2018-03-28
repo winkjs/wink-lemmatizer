@@ -25,7 +25,7 @@
 
 var chai = require( 'chai' );
 var mocha = require( 'mocha' );
-var lemmatize = require( '../src/lemmatize-nnx.js' );
+var lemmatize = require( '../src/wink-lemmatizer.js' ).noun;
 
 var expect = chai.expect;
 var describe = mocha.describe;

@@ -46,7 +46,7 @@ var regexes = [
 
 // ### lemmatizeVerb
 /**
- *
+ * @private
  * Conjugates a `verb` to it's base form (VB).
  *
  * @param {string} verb — that needs to be conjugated to base form.

@@ -17,23 +17,31 @@ Use [npm](https://www.npmjs.com/package/wink-lemmatizer) to install:
 ### Getting Started
 ```javascript
 // Load wink-lemmatizer
-var wl = require( 'wink-lemmatizer' );
+var lemmatize = require( 'wink-lemmatizer' );
 
 // Lemmatize nouns
-wl.lemmatizeNoun( 'knives' );
+lemmatize.noun( 'knives' );
 // -> 'knife'
-wl.lemmatizeNoun( 'potatoes' );
+lemmatize.noun( 'potatoes' );
 // -> 'potato'
-wl.lemmatizeNoun( 'men' );
+lemmatize.noun( 'men' );
 // -> 'man'
 
 // Lemmatize verbs
-wl.lemmatizeVerb( 'eaten' );
+lemmatize.verb( 'eaten' );
 // -> 'eat'
-wl.lemmatizeVerb( 'pushes' );
+lemmatize.verb( 'pushes' );
 // -> 'push'
-wl.lemmatizeVerb( 'suggesting' );
+lemmatize.verb( 'suggesting' );
 // -> 'suggest'
+
+// Lemmatize adjectives
+lemmatize.verb( 'farthest' );
+// -> 'far'
+lemmatize.verb( 'coolest' );
+// -> 'cool'
+lemmatize.verb( 'easier' );
+// -> 'easy'
 ```
 
 ### Documentation

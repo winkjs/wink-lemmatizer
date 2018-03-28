@@ -59,7 +59,7 @@ var rules = [
 
 // ### lemmatizeNoun
 /**
- *
+ * @private
  * Converts the input `noun` to it's singular form.
  *
  * @param {string} noun — that needs to be lemmatized.

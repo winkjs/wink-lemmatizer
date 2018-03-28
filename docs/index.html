@@ -35,9 +35,9 @@
               
                 
                 <li><a
-                  href='#lemmatizenoun'
+                  href='#adjective'
                   class="">
-                  lemmatizeNoun
+                  adjective
                   
                 </a>
                 
@@ -45,9 +45,19 @@
               
                 
                 <li><a
-                  href='#lemmatizeverb'
+                  href='#verb'
                   class="">
-                  lemmatizeVerb
+                  verb
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#noun'
+                  class="">
+                  noun
                   
                 </a>
                 
@@ -81,23 +91,31 @@
 </code></pre>
 <h3>Getting Started</h3>
 <pre class='hljs'><span class="hljs-comment">// Load wink-lemmatizer</span>
-<span class="hljs-keyword">var</span> wl = <span class="hljs-built_in">require</span>( <span class="hljs-string">'wink-lemmatizer'</span> );
+<span class="hljs-keyword">var</span> lemmatize = <span class="hljs-built_in">require</span>( <span class="hljs-string">'wink-lemmatizer'</span> );
 
 <span class="hljs-comment">// Lemmatize nouns</span>
-wl.lemmatizeNoun( <span class="hljs-string">'knives'</span> );
+lemmatize.noun( <span class="hljs-string">'knives'</span> );
 <span class="hljs-comment">// -&gt; 'knife'</span>
-wl.lemmatizeNoun( <span class="hljs-string">'potatoes'</span> );
+lemmatize.noun( <span class="hljs-string">'potatoes'</span> );
 <span class="hljs-comment">// -&gt; 'potato'</span>
-wl.lemmatizeNoun( <span class="hljs-string">'men'</span> );
+lemmatize.noun( <span class="hljs-string">'men'</span> );
 <span class="hljs-comment">// -&gt; 'man'</span>
 
 <span class="hljs-comment">// Lemmatize verbs</span>
-wl.lemmatizeVerb( <span class="hljs-string">'eaten'</span> );
+lemmatize.verb( <span class="hljs-string">'eaten'</span> );
 <span class="hljs-comment">// -&gt; 'eat'</span>
-wl.lemmatizeVerb( <span class="hljs-string">'pushes'</span> );
+lemmatize.verb( <span class="hljs-string">'pushes'</span> );
 <span class="hljs-comment">// -&gt; 'push'</span>
-wl.lemmatizeVerb( <span class="hljs-string">'suggesting'</span> );
-<span class="hljs-comment">// -&gt; 'suggest'</span></pre>
+lemmatize.verb( <span class="hljs-string">'suggesting'</span> );
+<span class="hljs-comment">// -&gt; 'suggest'</span>
+
+<span class="hljs-comment">// Lemmatize adjectives</span>
+lemmatize.verb( <span class="hljs-string">'farthest'</span> );
+<span class="hljs-comment">// -&gt; 'far'</span>
+lemmatize.verb( <span class="hljs-string">'coolest'</span> );
+<span class="hljs-comment">// -&gt; 'cool'</span>
+lemmatize.verb( <span class="hljs-string">'easier'</span> );
+<span class="hljs-comment">// -&gt; 'easy'</span></pre>
 <h3>Documentation</h3>
 <p>Check out the <a href="http://winkjs.org/wink-lemmatizer/">lemmatizer API documentation</a> to learn more.</p>
 <h3>Need Help?</h3>
@@ -118,18 +136,19 @@ Software Foundation, version 3 of the License.</p>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='lemmatizenoun'>
-      lemmatizeNoun
+    <h3 class='fl m0' id='adjective'>
+      adjective
     </h3>
     
     
   </div>
   
 
-  <p>Converts the input <code>noun</code> to it's singular form.</p>
+  <p>Conjugates a <code>adjective</code> to it's base form (VB). It also has an alias
+<code>lemmatizeAdjective</code> to maintain API level compatibility with preivious version.</p>
 
 
-  <div class='pre p1 fill-light mt0'>lemmatizeNoun(noun: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  <div class='pre p1 fill-light mt0'>adjective(adjective: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -146,8 +165,8 @@ Software Foundation, version 3 of the License.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>noun</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    — that needs to be lemmatized.
+            <span class='code bold'>adjective</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    — that needs to be conjugated to base form.
 
           </div>
           
@@ -162,8 +181,8 @@ Software Foundation, version 3 of the License.</p>
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        the singular of 
-<code>noun</code>
+        the base form of 
+<code>adjective</code>
 .
 
       
@@ -176,8 +195,8 @@ Software Foundation, version 3 of the License.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>lemmatizeNoun( <span class="hljs-string">'handkerchieves'</span> );
-<span class="hljs-comment">// -&gt; handkerchief</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>lemmatize.adjective( <span class="hljs-string">'farthest'</span> );
+<span class="hljs-comment">// -&gt; far</span></pre>
     
   
 
@@ -196,8 +215,8 @@ Software Foundation, version 3 of the License.</p>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='lemmatizeverb'>
-      lemmatizeVerb
+    <h3 class='fl m0' id='verb'>
+      verb
     </h3>
     
     
@@ -207,7 +226,7 @@ Software Foundation, version 3 of the License.</p>
   <p>Conjugates a <code>verb</code> to it's base form (VB).</p>
 
 
-  <div class='pre p1 fill-light mt0'>lemmatizeVerb(verb: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  <div class='pre p1 fill-light mt0'>verb(verb: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -254,8 +273,86 @@ Software Foundation, version 3 of the License.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>lemmatizeVerb( <span class="hljs-string">'winning'</span> );
+      <pre class='p1 overflow-auto round fill-light'>lemmatize.verb( <span class="hljs-string">'winning'</span> );
 <span class="hljs-comment">// -&gt; win</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='noun'>
+      noun
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts the input <code>noun</code> to it's singular form.</p>
+
+
+  <div class='pre p1 fill-light mt0'>noun(noun: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>noun</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    — that needs to be lemmatized.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        the singular of 
+<code>noun</code>
+.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>lemmatize.noun( <span class="hljs-string">'handkerchieves'</span> );
+<span class="hljs-comment">// -&gt; handkerchief</span></pre>
     
   
 

@@ -25,7 +25,7 @@
 
 var chai = require( 'chai' );
 var mocha = require( 'mocha' );
-var lemmatizer = require( '../src/wink-lemmatizer.js' );
+var lemmatize = require( '../src/wink-lemmatizer.js' );
 
 var expect = chai.expect;
 var describe = mocha.describe;
@@ -33,12 +33,18 @@ var it = mocha.it;
 
 describe( 'lemmatizeVerb test', function () {
   it( 'lemmatize tries must give try', function () {
-      expect( lemmatizer.lemmatizeVerb( 'tries' ) ).to.deep.equal( 'try' );
+      expect( lemmatize.verb( 'tries' ) ).to.deep.equal( 'try' );
   } );
 } );
 
 describe( 'lemmatizeNoun test', function () {
   it( 'lemmatize shoes must give shoe', function () {
-      expect( lemmatizer.lemmatizeNoun( 'shoes' ) ).to.deep.equal( 'shoe' );
+      expect( lemmatize.noun( 'shoes' ) ).to.deep.equal( 'shoe' );
+  } );
+} );
+
+describe( 'lemmatizeAdjective test', function () {
+  it( 'lemmatize coolest must give far', function () {
+      expect( lemmatize.adjective( 'coolest' ) ).to.deep.equal( 'cool' );
   } );
 } );
