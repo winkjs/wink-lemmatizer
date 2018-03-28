@@ -19,6 +19,14 @@ Use [npm](https://www.npmjs.com/package/wink-lemmatizer) to install:
 // Load wink-lemmatizer
 var lemmatize = require( 'wink-lemmatizer' );
 
+// Lemmatize adjectives
+lemmatize.adjective( 'farthest' );
+// -> 'far'
+lemmatize.adjective( 'coolest' );
+// -> 'cool'
+lemmatize.adjective( 'easier' );
+// -> 'easy'
+
 // Lemmatize nouns
 lemmatize.noun( 'knives' );
 // -> 'knife'
@@ -34,14 +42,6 @@ lemmatize.verb( 'pushes' );
 // -> 'push'
 lemmatize.verb( 'suggesting' );
 // -> 'suggest'
-
-// Lemmatize adjectives
-lemmatize.verb( 'farthest' );
-// -> 'far'
-lemmatize.verb( 'coolest' );
-// -> 'cool'
-lemmatize.verb( 'easier' );
-// -> 'easy'
 ```
 
 ### Documentation

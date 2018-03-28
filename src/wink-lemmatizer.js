@@ -20,13 +20,30 @@
 //     General Public License along with “wink-lemmatizer”.
 //     If not, see <http://www.gnu.org/licenses/>.
 
+// Load adjective/noun/verb exceptions.
 const adjectiveExceptions = require( 'wink-lexicon/src/wn-adjective-exceptions.js' );
-const verbExceptions = require( 'wink-lexicon/src/wn-verb-exceptions.js' );
 const nounExceptions = require( 'wink-lexicon/src/wn-noun-exceptions.js' );
+const verbExceptions = require( 'wink-lexicon/src/wn-verb-exceptions.js' );
+// Load all words (base form),
 const words = require( 'wink-lexicon/src/wn-words.js' );
+// and their senses.
 const senseMap = require( 'wink-lexicon/src/wn-word-senses.js' );
+// The name space.
 const lemmatize = Object.create( null );
 
+// The following code is an adaptation of [WordNet's Morphy](https://wordnet.princeton.edu/documentation/morphy7wn):
+
+// ### isAdjective
+/**
+ * @private
+ * Checks the word in base form is an adjective or not using wordnet senses.
+ *
+ * @param {string} word — that needs to be tested for adjective.
+ * @return {boolean} `true` if word is a valid adjective otherwise `false.`
+ * @example
+ * isAdjective( 'lat' );
+ * // -> false
+*/
 var isAdjective = function ( word ) {
   const index = words[ word ];
   if ( index === undefined ) return false;
@@ -35,7 +52,7 @@ var isAdjective = function ( word ) {
     if ( senses[ k ] < 2 ) return true;
   }
   return false;
-};
+}; // isAdjective()
 
 // ### lemmatizeAdjective
 /**
@@ -58,9 +75,19 @@ lemmatize.adjective = function ( adjective ) {
   lemma += 'e';
   if ( isAdjective( lemma ) ) return lemma;
   return adjective;
-};
+}; // adjective()
 
-
+// ### isVerb
+/**
+ * @private
+ * Checks the word in base form is a verb or not using wordnet senses.
+ *
+ * @param {string} word — that needs to be tested for verb.
+ * @return {boolean} `true` if word is a valid verb otherwise `false.`
+ * @example
+ * isVerb( 'eat' );
+ * // -> true
+*/
 var isVerb = function ( word ) {
   const index = words[ word ];
   if ( index === undefined ) return false;
@@ -69,12 +96,13 @@ var isVerb = function ( word ) {
     if ( senses[ k ] > 28 && senses[ k ] < 44  ) return true;
   }
   return false;
-};
+}; // isVerb()
 
 // ### lemmatizeVerb
 /**
  *
- * Conjugates a `verb` to it's base form (VB).
+ * Conjugates a `verb` to it's base form (VB). It also has an alias
+ * `lemmatizeVerb` to maintain API level compatibility with preivious version.
  *
  * @param {string} verb — that needs to be conjugated to base form.
  * @return {string} the base form of `verb`.
@@ -99,7 +127,7 @@ lemmatize.verb = function ( verb ) {
     if ( isVerb( lemma ) ) return lemma;
   }
   return verb;
-};
+}; // verb()
 
 const nounRegexes = [
   { replace: /s$/, by: '' },
@@ -113,6 +141,17 @@ const nounRegexes = [
   { replace: /ies$/, by: 'y' }
 ];
 
+// ### isNoun
+/**
+ * @private
+ * Checks the word in base form is a noun or not using wordnet senses.
+ *
+ * @param {string} word — that needs to be tested for noun.
+ * @return {boolean} `true` if word is a valid noun otherwise `false.`
+ * @example
+ * isAdjective( 'house' );
+ * // -> true
+*/
 var isNoun = function ( word ) {
   const index = words[ word ];
   if ( index === undefined ) return false;
@@ -121,12 +160,13 @@ var isNoun = function ( word ) {
     if ( senses[ k ] > 2 && senses[ k ] < 29  ) return true;
   }
   return false;
-};
+}; // isNoun()
 
 // ### lemmatizeNoun
 /**
  *
- * Converts the input `noun` to it's singular form.
+ * Converts the input `noun` to it's singular form. It also has an alias
+ * `lemmatizeNoun` to maintain API level compatibility with preivious version.
  *
  * @param {string} noun — that needs to be lemmatized.
  * @return {string} the singular of `noun`.
@@ -146,7 +186,7 @@ lemmatize.noun = function ( noun ) {
   }
 
   return noun;
-};
+}; // noun()
 
 // Create alias to maintain backwards compatibility.
 lemmatize.lemmatizeNoun = lemmatize.noun;
@@ -154,5 +194,3 @@ lemmatize.lemmatizeVerb = lemmatize.verb;
 lemmatize.lemmatizeAdjective = lemmatize.adjective;
 
 module.exports = lemmatize;
-
-// console.log( lemmatize.verb( 'lates') )
