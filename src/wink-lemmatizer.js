@@ -57,8 +57,8 @@ var isAdjective = function ( word ) {
 // ### lemmatizeAdjective
 /**
  *
- * Conjugates a `adjective` to it's base form (VB). It also has an alias
- * `lemmatizeAdjective` to maintain API level compatibility with preivious version.
+ * Conjugates an `adjective` to it's base form (VB). It also has an alias
+ * `lemmatizeAdjective` to maintain API level compatibility with previous version.
  *
  * @param {string} adjective — that needs to be conjugated to base form.
  * @return {string} the base form of `adjective`.
@@ -102,7 +102,7 @@ var isVerb = function ( word ) {
 /**
  *
  * Conjugates a `verb` to it's base form (VB). It also has an alias
- * `lemmatizeVerb` to maintain API level compatibility with preivious version.
+ * `lemmatizeVerb` to maintain API level compatibility with previous version.
  *
  * @param {string} verb — that needs to be conjugated to base form.
  * @return {string} the base form of `verb`.
@@ -166,7 +166,7 @@ var isNoun = function ( word ) {
 /**
  *
  * Converts the input `noun` to it's singular form. It also has an alias
- * `lemmatizeNoun` to maintain API level compatibility with preivious version.
+ * `lemmatizeNoun` to maintain API level compatibility with previous version.
  *
  * @param {string} noun — that needs to be lemmatized.
  * @return {string} the singular of `noun`.
