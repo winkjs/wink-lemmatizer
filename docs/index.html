@@ -1,376 +1,109 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset='utf-8' />
-  <title>wink-lemmatizer 2.0.0 | Documentation</title>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
-  <link href='assets/style.css' type='text/css' rel='stylesheet' />
-  <link href='assets/github.css' type='text/css' rel='stylesheet' />
-  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+    
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class='documentation m0'>
-    <div class='flex'>
-      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
-        <div class='py1 px2'>
-          <h3 class='mb0 no-anchor'>wink-lemmatizer</h3>
-          <div class='mb1'><code>2.0.0</code></div>
-          <input
-            placeholder='Filter'
-            id='filter-input'
-            class='col12 block input'
-            type='text' />
-          <div id='toc'>
-            <ul class='list-reset h5 py1-ul'>
-              
-                
-                <li><a
-                  href='#introduction'
-                  class="h5 bold black caps">
-                  Introduction
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#adjective'
-                  class="">
-                  adjective
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#verb'
-                  class="">
-                  verb
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#noun'
-                  class="">
-                  noun
-                  
-                </a>
-                
-                </li>
-              
-            </ul>
-          </div>
-          <div class='mt1 h6 quiet'>
-            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
-          </div>
-        </div>
-      </div>
-      <div id='split-right' class='relative overflow-auto height-viewport-100'>
-        
-          
-            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+<body>
 
-  <h2 id='introduction' class='mt0'>
-    Introduction
-  </h2>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
 
-  
-    <h1>wink-lemmatizer</h1>
-<p>English lemmatizer</p>
-<h3><a href="https://travis-ci.org/winkjs/wink-lemmatizer"><img src="https://api.travis-ci.org/winkjs/wink-lemmatizer.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/winkjs/wink-lemmatizer?branch=master"><img src="https://coveralls.io/repos/github/winkjs/wink-lemmatizer/badge.svg?branch=master" alt="Coverage Status"></a> <a href="http://inch-ci.org/github/winkjs/wink-lemmatizer"><img src="http://inch-ci.org/github/winkjs/wink-lemmatizer.svg?branch=master" alt="Inline docs"></a> <a href="https://david-dm.org/winkjs/wink-lemmatizer"><img src="https://david-dm.org/winkjs/wink-lemmatizer/status.svg" alt="dependencies Status"></a> <a href="https://david-dm.org/winkjs/wink-lemmatizer?type=dev"><img src="https://david-dm.org/winkjs/wink-lemmatizer/dev-status.svg" alt="devDependencies Status"></a></h3>
-<p><a href="http://winkjs.org/"><img align="right" src="https://decisively.github.io/wink-logos/logo-title.png" width="100px" ></a></p>
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="http://winkjs.org" target="_blank" >Wink JS</a></h2><h2><a href="https://github.com/winkjs/wink-pos-tagger" target="_blank" >Github</a></h2><h3>Global</h3><ul><li><a href="global.html#adjective">adjective</a></li><li><a href="global.html#noun">noun</a></li><li><a href="global.html#verb">verb</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>wink-lemmatizer</h1><p>English lemmatizer</p>
+<h3><a href="https://travis-ci.org/winkjs/wink-lemmatizer"><img src="https://api.travis-ci.org/winkjs/wink-lemmatizer.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/winkjs/wink-lemmatizer?branch=master"><img src="https://coveralls.io/repos/github/winkjs/wink-lemmatizer/badge.svg?branch=master" alt="Coverage Status"></a> <a href="http://inch-ci.org/github/winkjs/wink-lemmatizer"><img src="http://inch-ci.org/github/winkjs/wink-lemmatizer.svg?branch=master" alt="Inline docs"></a> <a href="https://david-dm.org/winkjs/wink-lemmatizer"><img src="https://david-dm.org/winkjs/wink-lemmatizer/status.svg" alt="dependencies Status"></a> <a href="https://david-dm.org/winkjs/wink-lemmatizer?type=dev"><img src="https://david-dm.org/winkjs/wink-lemmatizer/dev-status.svg" alt="devDependencies Status"></a> <a href="https://gitter.im/winkjs/Lobby"><img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="Gitter"></a></h3><p><a href="http://winkjs.org/"><img align="right" src="https://decisively.github.io/wink-logos/logo-title.png" width="100px" ></a></p>
 <p>Obtain base form or <a href="https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html">lemma</a> of a word using <strong><code>wink-lemmatizer</code></strong>. It is a part of <a href="http://winkjs.org/">wink</a> — a growing family of high quality packages for Statistical Analysis, Natural Language Processing and Machine Learning in NodeJS.</p>
-<h3>Installation</h3>
-<p>Use <a href="https://www.npmjs.com/package/wink-lemmatizer">npm</a> to install:</p>
-<pre><code>npm install wink-lemmatizer --save
-</code></pre>
-<h3>Getting Started</h3>
-<pre class='hljs'><span class="hljs-comment">// Load wink-lemmatizer</span>
-<span class="hljs-keyword">var</span> lemmatize = <span class="hljs-built_in">require</span>( <span class="hljs-string">'wink-lemmatizer'</span> );
+<h3>Installation</h3><p>Use <a href="https://www.npmjs.com/package/wink-lemmatizer">npm</a> to install:</p>
+<pre class="prettyprint source"><code>npm install wink-lemmatizer --save</code></pre><h3>Getting Started</h3><pre class="prettyprint source lang-javascript"><code>// Load wink-lemmatizer
+var lemmatize = require( 'wink-lemmatizer' );
 
-<span class="hljs-comment">// Lemmatize adjectives</span>
-lemmatize.adjective( <span class="hljs-string">'farthest'</span> );
-<span class="hljs-comment">// -&gt; 'far'</span>
-lemmatize.adjective( <span class="hljs-string">'coolest'</span> );
-<span class="hljs-comment">// -&gt; 'cool'</span>
-lemmatize.adjective( <span class="hljs-string">'easier'</span> );
-<span class="hljs-comment">// -&gt; 'easy'</span>
+// Lemmatize adjectives
+lemmatize.adjective( 'farthest' );
+// -> 'far'
+lemmatize.adjective( 'coolest' );
+// -> 'cool'
+lemmatize.adjective( 'easier' );
+// -> 'easy'
 
-<span class="hljs-comment">// Lemmatize nouns</span>
-lemmatize.noun( <span class="hljs-string">'knives'</span> );
-<span class="hljs-comment">// -&gt; 'knife'</span>
-lemmatize.noun( <span class="hljs-string">'potatoes'</span> );
-<span class="hljs-comment">// -&gt; 'potato'</span>
-lemmatize.noun( <span class="hljs-string">'men'</span> );
-<span class="hljs-comment">// -&gt; 'man'</span>
+// Lemmatize nouns
+lemmatize.noun( 'knives' );
+// -> 'knife'
+lemmatize.noun( 'potatoes' );
+// -> 'potato'
+lemmatize.noun( 'men' );
+// -> 'man'
 
-<span class="hljs-comment">// Lemmatize verbs</span>
-lemmatize.verb( <span class="hljs-string">'eaten'</span> );
-<span class="hljs-comment">// -&gt; 'eat'</span>
-lemmatize.verb( <span class="hljs-string">'pushes'</span> );
-<span class="hljs-comment">// -&gt; 'push'</span>
-lemmatize.verb( <span class="hljs-string">'suggesting'</span> );
-<span class="hljs-comment">// -&gt; 'suggest'</span></pre>
-<h3>Documentation</h3>
-<p>Check out the <a href="http://winkjs.org/wink-lemmatizer/">lemmatizer API documentation</a> to learn more.</p>
-<h3>Need Help?</h3>
-<p>If you spot a bug and the same has not yet been reported, raise a new <a href="https://github.com/winkjs/wink-lemmatizer/issues">issue</a> or consider fixing it and sending a pull request.</p>
-<h3>Copyright &#x26; License</h3>
-<p><strong>wink-lemmatizer</strong> is copyright 2017-18 <a href="http://graype.in/">GRAYPE Systems Private Limited</a>.</p>
+// Lemmatize verbs
+lemmatize.verb( 'eaten' );
+// -> 'eat'
+lemmatize.verb( 'pushes' );
+// -> 'push'
+lemmatize.verb( 'suggesting' );
+// -> 'suggest'</code></pre><h3>Documentation</h3><p>Check out the <a href="http://winkjs.org/wink-lemmatizer/">lemmatizer API documentation</a> to learn more.</p>
+<h3>Need Help?</h3><p>If you spot a bug and the same has not yet been reported, raise a new <a href="https://github.com/winkjs/wink-lemmatizer/issues">issue</a> or consider fixing it and sending a pull request.</p>
+<h3>Copyright &amp; License</h3><p><strong>wink-lemmatizer</strong> is copyright 2017-18 <a href="http://graype.in/">GRAYPE Systems Private Limited</a>.</p>
 <p>It is licensed under the under the terms of the GNU Affero General Public License as published by the Free
-Software Foundation, version 3 of the License.</p>
+Software Foundation, version 3 of the License.</p></article>
+    </section>
 
-  
-</section>
+
+
+
+
+
+    
+    
 </div>
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
 
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='adjective'>
-      adjective
-    </h3>
-    
-    
-  </div>
-  
+<br class="clear">
 
-  <p>Conjugates an <code>adjective</code> to it's base form (VB). It also has an alias
-<code>lemmatizeAdjective</code> to maintain API level compatibility with previous version.</p>
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Oct 06 2018 12:19:19 GMT+0530 (IST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
 
 
-  <div class='pre p1 fill-light mt0'>adjective(adjective: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>adjective</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    — that needs to be conjugated to base form.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        the base form of 
-<code>adjective</code>
-.
-
-      
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>lemmatize.adjective( <span class="hljs-string">'farthest'</span> );
-<span class="hljs-comment">// -&gt; far</span></pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='verb'>
-      verb
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Conjugates a <code>verb</code> to it's base form (VB). It also has an alias
-<code>lemmatizeVerb</code> to maintain API level compatibility with previous version.</p>
-
-
-  <div class='pre p1 fill-light mt0'>verb(verb: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>verb</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    — that needs to be conjugated to base form.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        the base form of 
-<code>verb</code>
-.
-
-      
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>lemmatize.verb( <span class="hljs-string">'winning'</span> );
-<span class="hljs-comment">// -&gt; win</span></pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='noun'>
-      noun
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Converts the input <code>noun</code> to it's singular form. It also has an alias
-<code>lemmatizeNoun</code> to maintain API level compatibility with previous version.</p>
-
-
-  <div class='pre p1 fill-light mt0'>noun(noun: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>noun</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    — that needs to be lemmatized.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        the singular of 
-<code>noun</code>
-.
-
-      
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>lemmatize.noun( <span class="hljs-string">'handkerchieves'</span> );
-<span class="hljs-comment">// -&gt; handkerchief</span></pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-      </div>
-    </div>
-  <script src='assets/anchor.js'></script>
-  <script src='assets/split.js'></script>
-  <script src='assets/site.js'></script>
 </body>
 </html>
