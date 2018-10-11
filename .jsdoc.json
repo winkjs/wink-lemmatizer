@@ -13,7 +13,7 @@
                 "target":"_blank"
             },
             "Github":{
-                "href":"https://github.com/winkjs/wink-pos-tagger",
+                "href":"https://github.com/winkjs/wink-lemmatizer",
                 "target":"_blank"
             }
         }
