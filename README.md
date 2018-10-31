@@ -52,7 +52,7 @@ Check out the [lemmatizer API documentation](http://winkjs.org/wink-lemmatizer/)
 If you spot a bug and the same has not yet been reported, raise a new [issue](https://github.com/winkjs/wink-lemmatizer/issues) or consider fixing it and sending a pull request.
 
 ### About wink
-Wink is a family of open source packages for **Statistical Analysis**, **Natural Language Processing** and **Machine Learning** in NodeJS. The code is **thoroughly documented** for easy human comprehension and has a **test coverage of ~100%** for reliability to build production grade solutions.
+[Wink](http://winkjs.org/) is a family of open source packages for **Statistical Analysis**, **Natural Language Processing** and **Machine Learning** in NodeJS. The code is **thoroughly documented** for easy human comprehension and has a **test coverage of ~100%** for reliability to build production grade solutions.
 
 ### Copyright & License
 

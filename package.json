@@ -47,7 +47,7 @@
   },
   "runkitExampleFilename": "./runkit/example.js",
   "dependencies": {
-    "wink-lexicon": "^1.7.0",
-    "wink-porter2-stemmer": "^1.0.8"
+    "wink-lexicon": "^2.0.1",
+    "wink-porter2-stemmer": "^2.0.0"
   }
 }
