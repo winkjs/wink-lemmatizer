@@ -16,12 +16,11 @@
   ],
   "main": "src/wink-lemmatizer.js",
   "scripts": {
-    "pretest": "npm run lint && npm run hint && npm run docs",
+    "pretest": "npm run lint && npm run docs",
     "test": "istanbul cover _mocha ./test/",
     "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "sourcedocs": "docker -i src -o ./sourcedocs --sidebar no",
     "docs": "jsdoc src/*.js -c .jsdoc.json",
-    "hint": "jshint ./src/*.js ./test/*.js ./runkit/*.js",
     "lint": "eslint ./src/*.js ./test/*.js ./runkit/*.js"
   },
   "repository": {
@@ -35,16 +34,15 @@
   },
   "homepage": "http://winkjs.org/",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "coveralls": "^3.0.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
     "docdash": "^1.0.0",
     "docker": "^1.0.0",
-    "documentation": "^6.1.0",
-    "eslint": "^4.19.1",
-    "istanbul": "^0.4.5",
+    "eslint": "^5.8.0",
+    "acorn": "^6.0.0",
+    "istanbul": "^1.1.0-alpha.1",
     "jsdoc": "^3.5.5",
-    "jshint": "^2.9.5",
-    "mocha": "^5.0.5",
+    "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0"
   },
   "runkitExampleFilename": "./runkit/example.js",
