@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - "6"
-  - "8"
+  - "12"
+  - "14"
 
 cache:
   directories:
@@ -9,4 +9,7 @@ cache:
 
 script:
   - npm run pretest
-  - npm run coveralls
+  - npm run test
+
+after_success:
+  - npm run coverage
