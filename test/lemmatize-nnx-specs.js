@@ -60,7 +60,8 @@ var plurals = [
                 [ 'men', 'man' ],
                 [ 'blood', 'blood' ],
                 [ 'scissors', 'scissors' ],
-                [ 'chaos', 'chaos' ]
+                [ 'chaos', 'chaos' ],
+                [ 'women', 'woman' ]
               ];
 
 describe( 'lemmatizeNNX test cycle', function () {
