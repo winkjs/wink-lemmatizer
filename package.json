@@ -36,12 +36,12 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
-    "docdash": "winkjs/docdash",
     "docker": "^1.0.0",
     "eslint": "^7.7.0",
     "jsdoc": "^3.6.5",
     "mocha": "^8.1.1",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "docdash": "github:winkjs/docdash"
   },
   "runkitExampleFilename": "./runkit/example.js",
   "dependencies": {
