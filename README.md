@@ -8,6 +8,11 @@ English lemmatizer
 
 Obtain base form or [lemma](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html) of nouns, verbs and adjectives using **`wink-lemmatizer`**.
 
+<table><tr><td>
+    <h4>Use <a href="https://github.com/winkjs/wink-nlp">wink-nlp</a> if your are looking for an integrated NLP package✨</h4>
+    <a href="https://github.com/winkjs/wink-nlp">WinkNLP</a> is a <b>developer friendly</b> JavaScript library for Natural Language Processing. Designed specifically to make development of NLP solutions <b>easier</b> and <b>faster</b>, winkNLP is optimized for the right balance of performance and accuracy. The package can handle large amount of raw text at speeds <a href="https://github.com/winkjs/wink-nlp#speed--accuracy">over 525,000 tokens/second</a> for the <a href="https://winkjs.org/wink-nlp/processing-pipeline.html">entire NLP pipeline</a>.
+</td></tr></table>
+
 ### Installation
 
 Use [npm](https://www.npmjs.com/package/wink-lemmatizer) to install:
