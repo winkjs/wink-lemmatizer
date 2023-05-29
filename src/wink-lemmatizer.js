@@ -118,6 +118,8 @@ var isVerb = function ( word ) {
  * // -> win
 */
 lemmatize.verb = function ( verb ) {
+  // Tem fix for missing word -- "go" in `wn-words` of `wink-lexicon`
+  if ( verb === 'goes' ) return 'go';
   var lemma = verbExceptions[ verb ];
   if ( lemma ) return lemma;
 

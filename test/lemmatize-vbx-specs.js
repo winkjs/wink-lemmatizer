@@ -52,7 +52,8 @@ var verbs = [
               [ 'foresaw', 'foresee' ],
               [ 'devouring', 'devour' ],
               [ 'scouring', 'scour' ],
-              [ 'lates', 'lates' ]
+              [ 'lates', 'lates' ],
+              [ 'goes', 'go' ]
             ];
 
 describe( 'lemmatizeVBX test cycle', function () {
