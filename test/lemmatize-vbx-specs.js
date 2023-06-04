@@ -53,7 +53,16 @@ var verbs = [
               [ 'devouring', 'devour' ],
               [ 'scouring', 'scour' ],
               [ 'lates', 'lates' ],
-              [ 'goes', 'go' ]
+              [ 'goes', 'go' ],
+              [ 'going', 'go' ],
+              [ 'went', 'go' ],
+              [ 'gone', 'go' ],
+              [ 'go', 'go' ],
+              [ 'doing', 'do' ],
+              [ 'does', 'do' ],
+              [ 'did', 'do' ],
+              [ 'done', 'do' ],
+              [ 'do', 'do' ]
             ];
 
 describe( 'lemmatizeVBX test cycle', function () {
